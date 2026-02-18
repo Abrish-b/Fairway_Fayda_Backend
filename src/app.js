@@ -71,8 +71,8 @@ if (env.NODE_ENV === "production") {
 /*
   ===== ROUTES =====
 */
-app.use("/token", tokenRoute);
-app.use("/userInfo", userInfoRoute);
+app.use("/api/token", tokenRoute);
+app.use("/api/userInfo", userInfoRoute);
 
 /*
   ===== HEALTH CHECK =====

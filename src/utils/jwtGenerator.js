@@ -13,7 +13,7 @@ export const generateSignedJwt = async () => {
     iss: CLIENT_ID,
     sub: CLIENT_ID,
     aud: TOKEN_ENDPOINT
-  };
+  };  
 
   const jwkJson = Buffer.from(PRIVATE_KEY_BASE64, 'base64').toString();
   const jwk = JSON.parse(jwkJson);

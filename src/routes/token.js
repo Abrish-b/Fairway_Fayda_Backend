@@ -16,7 +16,7 @@ router.post("/", async (req, res) => {
 
     // Generate client assertion JWT
     const clientAssertion = await generateSignedJwt();
-
+    console.log('jwt: ', clientAssertion);
     /*
       ===== Build OAuth Parameters =====
     */
