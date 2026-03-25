@@ -1,6 +1,6 @@
-import { importJWK, SignJWT } from 'jose';
+const generateSignedJwt = async () => {
+  const { importJWK, SignJWT } = await import('jose');
 
-export const generateSignedJwt = async () => {
   const {
     CLIENT_ID,
     TOKEN_ENDPOINT,
@@ -25,3 +25,5 @@ export const generateSignedJwt = async () => {
     .setExpirationTime('2h')
     .sign(privateKey);
 };
+
+module.exports = { generateSignedJwt };
